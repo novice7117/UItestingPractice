@@ -1,11 +1,5 @@
-#
-//  uitests.yml
-//  UItestingPractice
-//
-//  Created by subhash on 06/11/26.
-//
 
-name: iOS UI Tests
+name: macOS UI Tests
 
 on:
   push:
@@ -27,7 +21,7 @@ jobs:
 
       - name: Build and Run UI Tests
         run: |
-         xcodebuild test \
-         -project UITestingPractice.xcodeproj \
-         -scheme UITestingPractice \
-         -destination 'platform=macOS'
+          xcodebuild test \
+            -project UItestingPractice.xcodeproj \
+            -scheme UItestingPractice \
+            -destination 'platform=macOS'
