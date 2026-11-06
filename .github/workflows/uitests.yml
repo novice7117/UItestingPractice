@@ -24,4 +24,5 @@ jobs:
           xcodebuild test \
             -project UItestingPractice.xcodeproj \
             -scheme UItestingPractice \
-            -destination 'platform=macOS'
+            -destination 'platform=macOS' \
+            -resultBundlePath TestResults.xcresult

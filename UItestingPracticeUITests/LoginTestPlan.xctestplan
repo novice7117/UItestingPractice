@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "CBEB8D78-42A9-4991-94DC-FBAAEDF772F1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "UItestingPracticeUITests",
+        "UItestingPracticeUITests\/testExample()",
+        "UItestingPracticeUITests\/testLaunchPerformance()",
+        "UItestingPracticeUITestsLaunchTests",
+        "UItestingPracticeUITestsLaunchTests\/testLaunch()"
+      ],
+      "target" : {
+        "containerPath" : "container:UItestingPractice.xcodeproj",
+        "identifier" : "F2466A77309B33F100AFABF4",
+        "name" : "UItestingPracticeUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
