@@ -1,0 +1,33 @@
+#
+//  uitests.yml
+//  UItestingPractice
+//
+//  Created by subhash on 06/11/26.
+//
+
+name: iOS UI Tests
+
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ui-tests:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Build and Run UI Tests
+        run: |
+         xcodebuild test \
+         -project UITestingPractice.xcodeproj \
+         -scheme UITestingPractice \
+         -destination 'platform=macOS'

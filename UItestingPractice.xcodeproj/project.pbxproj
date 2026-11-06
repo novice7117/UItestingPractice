@@ -27,6 +27,7 @@
 		F2466A61309B33EE00AFABF4 /* UItestingPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UItestingPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2466A6E309B33F100AFABF4 /* UItestingPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UItestingPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2466A78309B33F100AFABF4 /* UItestingPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UItestingPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2466A92309DC37300AFABF4 /* uitests.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = uitests.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		F2466A58309B33EE00AFABF4 = {
 			isa = PBXGroup;
 			children = (
+				F2466A90309DC34000AFABF4 /* .github */,
 				F2466A63309B33EE00AFABF4 /* UItestingPractice */,
 				F2466A71309B33F100AFABF4 /* UItestingPracticeTests */,
 				F2466A7B309B33F100AFABF4 /* UItestingPracticeUITests */,
@@ -90,6 +92,22 @@
 				F2466A78309B33F100AFABF4 /* UItestingPracticeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F2466A90309DC34000AFABF4 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				F2466A91309DC35F00AFABF4 /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		F2466A91309DC35F00AFABF4 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				F2466A92309DC37300AFABF4 /* uitests.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
