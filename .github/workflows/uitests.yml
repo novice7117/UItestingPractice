@@ -40,11 +40,13 @@ jobs:
 
       - name: Build and Run UI Tests
         run: |
-          xcodebuild test \
-            -project UItestingPractice.xcodeproj \
-            -scheme "$SCHEME_NAME"  \
-            -destination 'platform=macOS' \
-            -resultBundlePath TestResults.xcresult
+         xcodebuild test \
+           -project UItestingPractice.xcodeproj \
+           -scheme "$SCHEME_NAME" \
+           -destination 'platform=macOS' \
+           -parallel-testing-enabled YES \
+           -parallel-testing-worker-count 2 \
+           -resultBundlePath TestResults.xcresult
 
       - name: Upload Test Results
         if: always()
