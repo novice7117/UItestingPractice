@@ -1,6 +1,10 @@
 
 name: macOS UI Tests
 
+env:
+  APP_ENV: Development
+  SCHEME_NAME: UItestingPractice
+
 on:
   push:
     branches:
@@ -19,6 +23,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
+      - name: Verify API Secret
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: |
+          if [ -n "$API_TOKEN" ]; then
+            echo "API Secret is configured"
+          else
+            echo "API Secret is missing"
+            exit 1
+          fi
 
       - name: Select Xcode
         run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
@@ -27,7 +42,7 @@ jobs:
         run: |
           xcodebuild test \
             -project UItestingPractice.xcodeproj \
-            -scheme UItestingPractice \
+            -scheme "$SCHEME_NAME"  \
             -destination 'platform=macOS' \
             -resultBundlePath TestResults.xcresult
 
